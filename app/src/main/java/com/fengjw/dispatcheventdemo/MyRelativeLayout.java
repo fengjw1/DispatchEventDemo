@@ -24,12 +24,23 @@ public class MyRelativeLayout extends RelativeLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Util.debug("MyRelativeLayout onInterceptTouchEvent");
-        return super.onInterceptTouchEvent(ev);
+//        return super.onInterceptTouchEvent(ev);
+        return true;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Util.debug("MyRelativeLayout onTouchEvent");
 
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                Util.debug("MyRelativeLayout MotionEvent.ACTION_DOWN:");
+                break;
+            case MotionEvent.ACTION_UP:
+                Util.debug("MyRelativeLayout MotionEvent.ACTION_UP:");
+                break;
+        }
         return super.onTouchEvent(event);
+//        return true;
     }
 }

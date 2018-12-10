@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mViewgroup = (RelativeLayout) findViewById(R.id.viewgroup);
 //        mViewgroup.setOnClickListener(this);
         mView2 = (View) findViewById(R.id.view2);
-        mView2.setOnClickListener(this);
+//        mView2.setOnClickListener(this);
     }
 
     @Override
